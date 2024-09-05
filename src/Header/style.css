@@ -1,8 +1,8 @@
 
 header {
-    position:absolute;
+  
     z-index: 111111111111111111111111;
-    width: 97%;
+    width: 95%;
 
 
     display: flex;
@@ -65,18 +65,49 @@ font-weight: 500;
   }
 
   @media (max-width: 555px) {
+   header{
+    flex-direction: column;
+   }
     header img {
       width: 70px;
     }
     header ul li {
   
-      font-size: 11pt;
+      font-size: 13pt;
       font-weight: bold;
   }
-  header ul {
- 
-    margin-right:60px;
+  .logo{
+    margin-left: -98.5%;
   }
+ .br{
+  margin-left: 95%;
+  margin-top: -44%;
+ }
   }
  
   
+
+
+
+  @media (max-width: 395px) {
+    header{
+     flex-direction: column;
+    }
+     header img {
+       width: 50px;
+     }
+     header ul li {
+   
+       font-size: 11pt;
+       font-weight: bold;
+   }
+   .logo{
+     margin-left: -98.5%;
+   }
+  .br{
+   margin-left: 95%;
+   margin-top: -44%;
+  }
+   }
+  
+   

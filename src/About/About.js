@@ -152,20 +152,7 @@ function About({sectionRef,updtecolorheader}) {
             onClick={() => {
             }}
             onAnimationComplete={() => setClicked(false)}
-            style={{
-              width: '60px',
-              height: '60px',
-              fontSize: '46px',
-              fontWeight: 900,
-              cursor: 'pointer',
-              backgroundColor: 'white',
-              color: 'black',
-              border: 'none',
-              borderRadius: '100px',
-              outline: 'none',
-              zIndex: 666,
-              position: 'relative',
-            }}
+         
           >
                <Link
           to="me"

@@ -27,7 +27,7 @@ body{
   bottom: 0;
 background-color: #000000;
    
-  opacity: 0.9; /* Black with 50% transparency */
+  opacity: 0.85; /* Black with 50% transparency */
   z-index: 1;
 }
 
@@ -47,5 +47,17 @@ height: 50px;
 border-radius: 45px;
 
 }
-
+.arrow button{
+  width: 58px;
+  height: 58px;
+  font-size: 46px;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: white;
+margin-top: 55px;
+  border-radius: 100px;
+  z-Index: 666;
+  position: relative;
+  border-color: rgb(227, 229, 232);
+}
 

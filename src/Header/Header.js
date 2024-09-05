@@ -46,14 +46,14 @@ const Header = () => {
   };
 
   return (
-    <header style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px' }}>
+    <header >
     {/* Logo or Image on the Left */}
-    <img src={logo} alt="Logo" style={{ width: isMobile ? '80px' : '100px' }} />
+    <img className='logo' src={logo} alt="Logo" style={{ width: isMobile ? '80px' : '100px' }} />
 
     {/* Navigation List and Burger Menu on the Right */}
     <div style={{ display: 'flex', alignItems: 'center' }}>
       {isMobile ? (
-        <div onClick={() => setIsOpen2(!isOpen2)} style={{ cursor: 'pointer' }}>
+        <div className='br' onClick={() => setIsOpen2(!isOpen2)} style={{ cursor: 'pointer' }}>
           {/* Burger Menu Icon */}
           <motion.div
             style={{

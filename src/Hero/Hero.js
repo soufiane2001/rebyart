@@ -243,26 +243,13 @@ const Hero = () => {
 })}
 
 </div>
+<div className='arrow'>
 <motion.button
             animate={clicked ? clickAnimation : breathingAnimation}
             onClick={() => {
             }}
             onAnimationComplete={() => setClicked(false)}
-            style={{
-              width: '63px',
-              height: '63px',
-              fontSize: '46px',
-              fontWeight: 900,
-              cursor: 'pointer',
-              backgroundColor: 'white',
-              color: 'black',
-            borderWidth:0,
-              borderRadius: '100px',
-              outline: 'none',
-              zIndex: 666,
-              marginTop:'55px',
-              position: 'relative',
-            }}
+      
           >
 
 <Link
@@ -274,7 +261,7 @@ const Hero = () => {
             <img style={{width:30}} className='arrowimg' src={arrow} alt="Arrow" /></Link>
           </motion.button>
 
-
+</div>
   </div>
   
 

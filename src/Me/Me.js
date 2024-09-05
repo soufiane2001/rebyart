@@ -118,20 +118,7 @@ function App({sectionRef}) {
             onClick={() => {
             }}
             onAnimationComplete={() => setClicked(false)}
-            style={{
-              width: '63px',
-              height: '63px',
-              fontSize: '46px',
-              fontWeight: 900,
-              cursor: 'pointer',
-              backgroundColor: 'white',
-              color: 'black',
-            borderWidth:0,
-              borderRadius: '100px',
-              outline: 'none',
-              zIndex: 666,
-              position: 'relative',
-            }}
+        
           >
                <Link
           to="hero"
@@ -139,7 +126,7 @@ function App({sectionRef}) {
           duration={1000}
           offset={-50} // Ajustez si nécessaire pour le décalage
         >
-            <img style={{width:30}} className='arrowimg' src={arrow} alt="Arrow" /></Link>
+            <img style={{width:25}} className='arrowimg' src={arrow} alt="Arrow" /></Link>
           </motion.button>
         </div>
 
