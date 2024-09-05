@@ -1,0 +1,324 @@
+/* Base styles for larger screens (desktops) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.m {
+ padding-top: 130px;
+ padding-bottom: 180px;
+ padding-left:40px ;
+ border-bottom: 1px solid rgb(224, 224, 224);
+   padding-right: 40px;
+}
+.m h3{
+    font-size: 30pt;
+    text-align: center;
+    font-weight: 500;
+    color: #551ed3;
+    font-family: "Montserrat", system-ui;
+}
+.me {
+border: 0px solid rgb(230, 230, 230);
+
+padding: 45px;
+padding-top: 65px;
+padding-bottom: 100px;
+border-radius: 10px;
+font-weight: 400;
+    display: flex;
+    font-family: "Montserrat", system-ui;
+}
+
+.text{
+    width: 50%;
+  
+}
+
+.text p {
+    font-size: 15pt;
+    line-height: 40px;
+   color: #2b2b2b;
+   font-family: "Montserrat", system-ui;
+ font-weight: 500;}
+
+.custom-shapes {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 500px; /* Width of the shape */
+    height: 350px; /* Height of the shape */
+    background: linear-gradient(135deg, #551ed3, #a696f6);
+    border-radius: 50% 50% 50% 40% / 60% 60% 40% 60%; /* Adjust these values to refine the shape */
+}
+
+.custom-shape-images {
+    position: absolute;
+    margin-left: 230px;
+    margin-top: -230px;
+    width: 400px; /* Adjust based on image size */
+    z-index: 10; /* Ensure the image is on top */
+}
+
+.arrowimg{
+    width: 10px;
+}
+
+@media (max-width: 1706px) {
+    .custom-shapes {  
+        margin-left: 180px;
+     
+    }
+    
+    .custom-shape-images {
+       
+        margin-left: 180px;
+        margin-top: -233px;
+       
+    }
+
+}
+
+@media (max-width: 1542px) {
+   
+.custom-shapes {
+  
+    margin-left: 100px;
+
+    width: 500px; /* Width of the shape */
+    height: 350px; /* Height of the shape */
+  
+}
+
+.custom-shape-images {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: -230px;
+    width: 400px; /* Adjust based on image size */
+    z-index: 10; /* Ensure the image is on top */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet styles */
+@media (max-width: 1268px) {
+ 
+    .m {
+        padding: 100px 50px;
+      
+    }
+    .me {
+        padding-top: 300px;
+        flex-direction:column-reverse;
+        align-items:center;
+
+padding-bottom: 15px;
+  
+    }
+
+    .image, .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text p {
+        font-size: 16pt;
+        line-height: 30px;
+        margin-top: 50px;
+    }
+
+    .custom-shapes {
+        width: 400px;
+        height: 250px;
+       margin-left: -180px;
+        margin-top: -250px;
+    }
+
+    .custom-shape-images {
+        width: 250px;
+        margin-left: -110px;
+        margin-top: -380px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 798px) {
+    .m {
+        padding: 20px;
+
+      
+    }
+    .me {
+        padding: 20px;
+        padding-top: 300px;
+        flex-direction:column-reverse;
+padding-bottom: 15px;
+  
+    }
+
+    .image, .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text p {
+        font-size: 16pt;
+        margin-top: 40px;
+    }
+
+    .custom-shape {
+        width: 350px;
+        height: 200px;
+        margin-left: 20%;
+        margin-top: -190px;
+    }
+
+    .custom-shape-image {
+        width: 400px;
+        margin-left: -30%;
+        margin-top: -450px;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 628px) {
+  
+    .m h3{
+        font-size: 28pt;
+        text-align: center;
+        font-weight: 400;
+        color: #551ed3;
+        font-family: "Poppins", sans-serif;
+    }
+
+
+    .m {
+        padding: 20px;
+    }
+    .me {
+        padding-top: 300px;
+        flex-direction:column-reverse;
+padding-bottom: 15px;
+  
+    }
+
+    .image, .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text p {
+        font-size: 15pt;
+        margin-top: 40px;
+    }
+
+  
+ 
+}
+
+
+
+
+
+
+@media (max-width: 538px) {
+    .m {
+        padding: 40px;
+    }
+    .me {
+        padding-top: 300px;
+        flex-direction:column-reverse;
+padding-bottom: 15px;
+  
+    }
+
+    .image, .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text p {
+        font-size: 12pt;
+        margin-top: 40px;
+        line-height: 25px;
+    }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 488px) {
+ 
+    .custom-shapes {
+        width: 300px;
+        height: 170px;
+      margin-left: -140px;
+    }
+
+    .custom-shape-images {
+        width: 200px;
+      
+    }
+
+    .m {
+        padding: 40px;
+    }
+    .me {
+        padding-top: 300px;
+        flex-direction:column-reverse;
+padding-bottom: 15px;
+  
+    }
+
+    .image, .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text p {
+        font-size: 10.5pt;
+        margin-top: -30px;
+    }
+
+   
+}
+
+/* Phone styles */

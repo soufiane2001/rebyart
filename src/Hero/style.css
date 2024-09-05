@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.hero{
+  padding-top:130px;
+ display: flex;
+flex-direction: column;
+align-items: center;
+  padding-bottom: 65px;
+
+}
+*{
+  font-family: "Poppins", sans-serif;
+}
+h1{
+  color: rgb(83, 80, 80);
+  font-size: 20pt;
+  text-align: center;
+  font-weight: 400;
+ 
+}
+
+
+/* Navigation */
+.navigation {
+
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  z-index: 10;
+}
+
+
+.nav-link.active {
+  background-color: #4caf50;
+}
+
+.nav-link:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+.card{
+  border: 1px solid rgb(255, 220, 220);
+  margin-top: 35px;
+ 
+  width: 1350px;
+  height: 750px;
+ border: 9px solid rgb(142, 143, 187);
+ border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; overflow-y: scroll;
+}
+
+.card::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: #494949; /* Scrollbar thumb color */
+  border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+}
+
+.card::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3); /* Background color of the scrollbar track */
+}
+
+/* Updated Media Queries for Responsiveness */
+
+.over{
+  position: absolute;
+  background-color: black;
+  border-radius: 10px;
+  opacity: 0.9;
+  width: 1350px;
+  height: 750px;
+
+}
+.content{
+  position: relative;
+ 
+   padding: 35px;
+  z-index: 13;
+}
+.content h1{
+  background: linear-gradient(90deg, #9e1f87, #f43de1, #5d014e);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 30pt;
+}
+
+.content h2{
+  background: linear-gradient(90deg, #ffeb84, #d58701, #8d4b00);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 17pt;
+}
+
+.content p{
+  color: rgb(208, 208, 208);
+  font-size: 15pt;
+}
+
+
+.gr{
+  margin-top: 45px;
+}
+
+.arrow img{
+  width: 10px;
+}
+.nav-link {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff6f61;
+ 
+
+  color: white;
+  cursor: pointer;
+  font-size: 13pt;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 4px;
+}
+
+
+@media (max-width:1555px) {
+
+.card,.over{
+  width: 1100px;
+}
+
+}
+
+@media (max-width:1140px) {
+
+  .card,.over{
+    width: 900px;
+    height: 600px;
+  }
+  .content h2{
+
+    font-size: 15pt;
+  }
+  
+  .content p{
+  
+    font-size: 13pt;
+  }
+  }
+
+
+  @media (max-width:955px) {
+
+    .card,.over{
+      width: 750px;
+    }
+    .content h1{
+      font-size: 20pt;
+    }
+    .content h2{
+  
+      font-size: 13pt;
+    }
+    
+    .content p{
+    
+      font-size: 11pt;
+    }
+    .gr{
+      margin-top: 25px;
+    }
+    .nav-link {
+      font-size: 11pt;
+   
+    }
+    
+    }
+
+
+    @media (max-width:802px) {
+
+      .card,.over{
+        width: 600px;
+        border-width:5px ;
+      }
+      .content h1{
+        font-size: 20pt;
+      }
+      .content h2{
+    
+        font-size: 13pt;
+      }
+      
+      .content p{
+      
+        font-size: 11pt;
+      }
+      .gr{
+        margin-top: 25px;
+      }
+      .nav-link {
+        font-size: 11pt;
+     
+      }
+      
+      }
+
+
+      @media (max-width:622px) {
+        h1{
+          margin-top: -20px;
+        }
+.hero{
+  margin-top: 0px;
+}
+        .card,.over{
+          width: 500px;
+          border-width:5px ;
+        }
+        .content h1{
+          font-size: 16pt;
+        }
+        .content h2{
+      
+          font-size: 12pt;
+        }
+        
+        .content p{
+        
+          font-size: 10pt;
+        }
+        .gr{
+          margin-top: 25px;
+        }
+        .nav-link {
+          font-size: 10pt;
+       
+        }
+        
+        }
+
+        @media (max-width:521px) {
+h1{
+  margin-top: -55px;
+  font-size: 14pt;
+}
+          .card,.over{
+            width: 400px;
+            border-width:5px ;
+            height: 450px;
+            
+          }
+         .gr{
+          padding: -2px;
+         }
+          .content h1{
+            font-size: 17pt;
+          }
+          .content h2{
+        
+            font-size: 10pt;
+          }
+          
+          .content p{
+          
+            font-size: 10pt;
+          }
+          .gr{
+            margin-top: 25px;
+          }
+          .nav-link {
+            font-size: 10pt;
+         
+          }
+          
+          }
+
+
+          @media (max-width:431px) {
+.card{
+  width: 90%;
+  margin-left: 5%;
+
+}
+.over{
+  width: 90%;
+  margin-left: 0%;
+}     
+.card{
+  border-width: 0px;
+}
+}

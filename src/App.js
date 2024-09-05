@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import bateau from './assets/7.png';
+import logo from './assets/Logo.png';
+import inst from './assets/ins.png';
+import email from './assets/email.png';
+import arrow from './assets/arrow.png';
+import ger from './assets/Germany.png';
+import fran from './assets/fran.png';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState, useRef } from 'react';
+import Header from './Header/Header';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Hero from './Hero/Hero';
+import About from './About/About';
+import Me from './Me/Me';
+import Tableaux from './Tableaux/Tableaux';
 
 function App() {
+
+  const sectionRef = useRef(null);
+  var [colorheader,setcolorheader]=useState("white")
+  var updtecolorheader=()=>{setcolorheader("black")}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+ 
+  <About/>
+<Me/>
+  <Hero/>
+<Tableaux/>
     </div>
   );
 }
+
+
 
 export default App;

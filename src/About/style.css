@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+.background-image {
+  
+ /* Full viewport height */
+  color: #fff; /* White text color */
+
+padding: 20px;
+padding-bottom: 100px;
+}
+.all{
+  background-image: url('../../public/2.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  position: relative;
+  
+}
+
+.overlayt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(4px);
+
+  opacity: 0.9; /* Black with 50% transparency */
+  z-index: 1;
+}
+
+.contentt,.bt,header{
+ 
+  position: relative;
+  z-index: 6;
+ 
+}
+
+.conten{
+background-color: blueviolet;
+
+position: relative;
+z-index: 6;
+}
+  
+.conten h2{
+  
+font-size: 53pt;
+}
+
+
+.conten p{
+  
+  font-size: 53pt;
+  }
+  
+  .arrow{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    justify-content: center;
+  }
+  
+  .arrow img{
+   width: 55px;
+    }
+
+    .info{
+     justify-content:space-around;
+     
+      margin-top: 90px;
+      font-family: "Montserrat", system-ui;
+      background: linear-gradient(90deg, #d811b4, #ffa4f6, #490034 80%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    .info h2{
+      font-size: 65pt;
+font-weight: 500;
+padding-left:66px;
+  font-family: "Montserrat", system-ui;
+    }
+    .info p{
+      font-weight: 500;
+      font-size: 55pt;
+      margin-top: -70px;
+      padding-left:66px;
+      font-family: "Montserrat", system-ui;
+    }
+    .social{
+      margin-left: 60px;
+      margin-top: -50px;
+    }
+    .social img {
+      width: 60px;
+      height: 60px;
+      margin-left: 15px;
+    }
+
+    @media (max-width:1355px) {
+
+      .background-image {
+  
+        /* Full viewport height */
+         color: #fff; /* White text color */
+       
+       padding: 20px;
+       padding-bottom: 60px;
+       }
+
+
+    }
+    @media (max-width:1035px) {
+
+
+.info{
+  justify-content: flex-start;
+}
+
+
+
+
+    }
+
+
+   
+
+
+    
+    @media (max-width:735px) {
+
+
+
+      .conten h2{
+  
+        font-size: 48pt;
+        }
+        
+        
+        .conten p{
+          
+          font-size: 48t;
+          }
+          
+          .arrow{
+            display: flex;
+            flex-direction: row;
+            margin-top: 25px;
+            justify-content: center;
+          }
+          
+          .arrow img{
+           width: 45px;
+            }
+        
+            .info{
+             justify-content:space-around;
+             
+              margin-top: 50px;
+              font-family: "Montserrat", system-ui;
+              background: linear-gradient(90deg, #d811b4, #ffa4f6, #490034 80%);
+              -webkit-background-clip: text;
+              color: transparent;
+            }
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+            .info h2{
+              margin-top: 135px;
+              font-size: 59pt;
+        font-weight: 500;
+        padding-left:25px;
+          font-family: "Montserrat", system-ui;
+            }
+            .info p{
+              font-weight: 500;
+              font-size: 59pt;
+              margin-top: -40px;
+              padding-left:25px;
+              font-family: "Montserrat", system-ui;
+            }
+
+            .bt{
+              margin-left: -100px;
+              display: none;
+            }
+            .social{
+              margin-left: 30px;
+              margin-top: 50px;
+            }
+            .social img {
+              width: 60px;
+              height: 60px;
+              margin-left: 15px;
+            }
+            .background-image {
+  
+              
+             padding-bottom: 50px;
+             }
+    }
+
+
+    @media (max-width:605px) {
+      .info h2{
+        margin-top: 135px;
+        font-size: 52pt;
+  font-weight: 500;
+  padding-left:15px;
+    font-family: "Montserrat", system-ui;
+      }
+      .info p{
+        font-weight: 500;
+        font-size: 52pt;
+        margin-top: -40px;
+        padding-left:15px;
+        font-family: "Montserrat", system-ui;
+      }
+      .social{
+        margin-left: 10px;
+        margin-top: -40px;
+      }
+      .social img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+      }
+    }
+
+
+    @media (max-width:527px) {
+      .info h2{
+        margin-top: 85px;
+        font-size: 46pt;
+  font-weight: 500;
+  padding-left:5px;
+    font-family: "Montserrat", system-ui;
+      }
+      .info p{
+        font-weight: 500;
+        font-size: 46pt;
+        margin-top: -40px;
+        padding-left:5px;
+        font-family: "Montserrat", system-ui;
+      }
+      .social{
+        margin-left: 10px;
+        margin-top: -40px;
+      }
+      .social img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+      }
+      .arrow{
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        justify-content: center;
+      }
+      
+      .arrow img{
+       width: 5px;
+        }
+    }
+
+
+    
+    @media (max-width:465px) {
+      .background-image {
+  
+        /* Full viewport height */
+         color: #fff; /* White text color */
+       
+       padding: 20px;
+       padding-bottom: 10px;
+       }
+      .info h2{
+      
+        font-size: 40pt;
+  font-weight: 500;
+  
+    font-family: "Montserrat", system-ui;
+      }
+      .info p{
+        font-weight: 500;
+        font-size: 40pt;
+        margin-top: -40px;
+    
+        font-family: "Montserrat", system-ui;
+      }
+      .social{
+        margin-left: 0px;
+        margin-top: -40px;
+      }
+      .social img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+      }
+    }
+    @media (max-width:409px) {
+      .background-image {
+  
+        /* Full viewport height */
+         color: #fff; /* White text color */
+       
+       padding: 20px;
+       padding-bottom: 10px;
+       }
+      .info h2{
+      
+        font-size: 36pt;
+  font-weight: 500;
+  
+    font-family: "Montserrat", system-ui;
+      }
+      .info p{
+        font-weight: 500;
+        font-size: 36pt;
+        margin-top: -40px;
+    
+        font-family: "Montserrat", system-ui;
+      }
+      .social{
+        margin-left: 0px;
+        margin-top: -40px;
+      }
+      .social img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+      }
+    }
