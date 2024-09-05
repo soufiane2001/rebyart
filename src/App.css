@@ -47,9 +47,26 @@ height: 50px;
 border-radius: 45px;
 
 }
+.arrow{
+  background-color: white;
+  position:absolute;
+  z-index: 55;
+  display: inline;
+  width: 55px;
+  height: 55px;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  left: 48%;
+ 
+  border:1px solid rgb(202, 200, 200);
+}
+.imgarrow{
+  width: 14px;
+}
 .arrow button{
-  width: 58px;
-  height: 58px;
+  width: 35px;
+  height: 38px;
   font-size: 46px;
   font-weight: 900;
   cursor: pointer;
@@ -61,3 +78,8 @@ margin-top: 55px;
   border-color: rgb(227, 229, 232);
 }
 
+@media (max-width:580px) {
+.arrow{
+  left: 45%;
+}
+}

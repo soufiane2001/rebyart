@@ -313,3 +313,52 @@
 
 
 
+@media (max-width: 520px) {
+ .container{
+    width: 85%;
+ }
+    .item {
+        width: 120px;
+        height: 180px;
+    }
+
+    .item:nth-child(3) {
+        left: 68%;
+        top: 17%;
+    }
+
+    .item:nth-child(4) {
+        left: 68% ;
+    }
+
+    .item:nth-child(5) {
+        left: 68% ;
+        top: 83%;
+    }
+    .item:nth-child(n+6) {
+      display: none;
+    }
+
+   
+    .item .content {
+        width: 65%;
+        left: 10px;
+        font-size: 11px;
+    }
+
+    .item .name {
+        font-size: 20px;
+    }
+
+    .item .des {
+        font-size: 14px;
+    }
+
+    .item button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+

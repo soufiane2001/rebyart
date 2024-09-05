@@ -62,7 +62,7 @@ export default function Tableaux() {
   ];
 
   return (
-    <div>
+    <div style={{marginTop:100}}>
       <h1 className='tbl'>Tableaux</h1>
       {
     <div className="container" >

@@ -113,23 +113,16 @@ function App({sectionRef}) {
       </div>
 
       <div className="arrow">
-          <motion.button
-            animate={clicked ? clickAnimation : breathingAnimation}
-            onClick={() => {
-            }}
-            onAnimationComplete={() => setClicked(false)}
-        
-          >
-               <Link
-          to="hero"
-          smooth={true}
-          duration={1000}
-          offset={-50} // Ajustez si nécessaire pour le décalage
-        >
-            <img style={{width:25}} className='arrowimg' src={arrow} alt="Arrow" /></Link>
-          </motion.button>
-        </div>
+      
+      <Link
+ to="hero"
+ smooth={true}
+ duration={1000}
+ offset={-50} // Ajustez si nécessaire pour le décalage
+>
+   <img src={arrow} style={{width:21,marginTop:15}} alt="Arrow" /></Link>
 
+</div>
     </div>
   );
 }

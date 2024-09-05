@@ -147,21 +147,15 @@ function About({sectionRef,updtecolorheader}) {
 
 
         <div className="arrow">
-          <motion.button
-            animate={clicked ? clickAnimation : breathingAnimation}
-            onClick={() => {
-            }}
-            onAnimationComplete={() => setClicked(false)}
-         
-          >
+      
                <Link
           to="me"
           smooth={true}
           duration={1000}
           offset={-50} // Ajustez si nécessaire pour le décalage
         >
-            <img src={arrow} style={{width:'30px'}} alt="Arrow" /></Link>
-          </motion.button>
+            <img src={arrow} style={{width:21,marginTop:15}} alt="Arrow" /></Link>
+         
         </div>
 
 

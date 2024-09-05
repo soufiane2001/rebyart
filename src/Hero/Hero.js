@@ -241,27 +241,19 @@ const Hero = () => {
   </div>
 )
 })}
-
-</div>
-<div className='arrow'>
-<motion.button
-            animate={clicked ? clickAnimation : breathingAnimation}
-            onClick={() => {
-            }}
-            onAnimationComplete={() => setClicked(false)}
+<div style={{marginTop:55 }} className="arrow">
       
-          >
-
-<Link
-          to="tbl"
-          smooth={true}
-          duration={1000}
-          offset={-50} // Ajustez si nécessaire pour le décalage
-        >
-            <img style={{width:30}} className='arrowimg' src={arrow} alt="Arrow" /></Link>
-          </motion.button>
+      <Link
+ to="slide"
+ smooth={true}
+ duration={1000}
+ offset={-50} // Ajustez si nécessaire pour le décalage
+>
+   <img src={arrow} style={{width:21,marginTop:15}} alt="Arrow" /></Link>
 
 </div>
+</div>
+
   </div>
   
 

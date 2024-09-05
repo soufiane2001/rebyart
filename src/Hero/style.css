@@ -108,9 +108,7 @@ h1{
   margin-top: 45px;
 }
 
-.arrow img{
-  width: 10px;
-}
+
 .nav-link {
   padding: 10px 20px;
   border: none;
@@ -243,6 +241,9 @@ h1{
         }
 
         @media (max-width:521px) {
+          .hero{
+            padding-bottom: 5px;
+          }
 h1{
   margin-top: -55px;
   font-size: 14pt;
@@ -256,8 +257,12 @@ h1{
          .gr{
           padding: -2px;
          }
+         .content{
+          padding-top: 75px;
+         }
           .content h1{
             font-size: 17pt;
+            
           }
           .content h2{
         
