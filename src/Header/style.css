@@ -64,16 +64,26 @@ font-weight: 500;
     }
   }
 
+  @media (max-width: 709px) {
+header{
+  width: 80%;
+}
+  }
+
+
+
   @media (max-width: 555px) {
+
    header{
     flex-direction: column;
+    width: 78%;
    }
     header img {
       width: 70px;
     }
     header ul li {
   
-      font-size: 13pt;
+      font-size: 12pt;
       font-weight: bold;
   }
   .logo{
@@ -98,14 +108,14 @@ font-weight: 500;
      }
      header ul li {
    
-       font-size: 11pt;
+       font-size: 10pt;
        font-weight: bold;
    }
    .logo{
      margin-left: -98.5%;
    }
   .br{
-   margin-left: 95%;
+   margin-left: 98%;
    margin-top: -44%;
   }
    }

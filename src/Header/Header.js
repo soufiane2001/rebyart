@@ -129,8 +129,8 @@ const Header = () => {
               <motion.div
                 onClick={() =>{ setIsOpen(!isOpen)}}
                 style={{
-                  width: '40px',
-                  height: '40px',
+                  width: '30px',
+                  height: '30px',
                   backgroundColor: '#6200ea',
                   borderRadius: '50%',
                   overflow: 'hidden',

@@ -5,7 +5,7 @@
  padding-top: 130px;
  padding-bottom: 180px;
  padding-left:40px ;
- border-bottom: 1px solid rgb(224, 224, 224);
+ border-bottom: 0px solid rgb(255, 255, 255);
    padding-right: 40px;
 }
 .m h3{
@@ -16,7 +16,7 @@
     font-family: "Montserrat", system-ui;
 }
 .me {
-border: 0px solid rgb(230, 230, 230);
+border: 0px solid rgb(255, 255, 255);
 
 padding: 45px;
 padding-top: 65px;
@@ -254,8 +254,10 @@ padding-bottom: 15px;
 
 
 @media (max-width: 538px) {
+    
     .m {
         padding: 40px;
+        margin-top: 80px;
     }
     .me {
         padding-top: 300px;

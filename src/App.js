@@ -29,7 +29,12 @@ function App() {
   <About/>
 <Me/>
   <Hero/>
-<Tableaux/>
+
+
+  <Tableaux/>    
+   
+
+
     </div>
   );
 }
