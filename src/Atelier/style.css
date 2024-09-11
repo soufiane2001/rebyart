@@ -1,0 +1,257 @@
+.atelier{
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.atelier1{
+    width: 800px;
+    height: 700px;
+    background: linear-gradient(to right bottom, #a37fff, #3b018c,rgb(11, 1, 90));
+    border-radius: 15px;
+    padding: 50px 15px 30px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.atelier1 h1{
+    color: whitesmoke;
+    text-align: start;
+    font-size: 15pt;
+    font-weight: 500;
+}
+
+.atelier1 h2{
+    color: rgb(196, 217, 222);
+    text-align:end;
+    font-size: 38pt;
+    padding-right: 40px;
+    font-weight: 500;
+}
+.atelierimg{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 750px;
+  border-radius: 5px;
+  
+}
+h4{
+    text-align: center;
+    font-size: 24pt;
+    background: linear-gradient(90deg, #ffeb84, #d58701, #c32802);
+  -webkit-background-clip: text;
+  color: transparent;
+    font-weight: 500;
+    margin-top: -10px;
+}
+.ateliercontenu{
+margin-top: -30px;
+    overflow-y: scroll;
+    height: 68%;
+    padding: 15px;
+}
+.scroll-container::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+    border-radius: 15px;
+    background: lightgray; /* Background of the scrollbar track */
+
+}
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgb(88, 87, 84); /* Scrollbar color */
+    border-radius: 30px; /* Rounds the scrollbar edges */
+    border: 2px solid lightgray; /* Adds padding around the scrollbar */
+  }
+.ateliercontenu h3{
+    font-size: 14pt;
+    font-weight: 600;
+    color: #8ae1f7;
+}
+.ateliercontenu p{
+    padding: 10px;
+   font-size: 13pt;
+    font-weight: 400;
+    color: rgb(242, 237, 237);
+}
+
+
+
+@media (max-width: 1450px) {
+
+body{
+    background-color: red;
+}
+.atelier1{
+    width: 650px;
+    height: 700px;
+    border-radius: 45px;
+    padding: 50px 15px 30px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.atelierimg{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    height: 500px;
+  border-radius: 35px;
+  
+}
+
+}
+
+
+
+@media (max-width: 1300px) {
+
+    body{
+        background-color: rgb(12, 128, 181);
+    }
+    .atelier1{
+        width: 550px;
+        height: 600px;
+       
+       
+        padding: 50px 15px 30px 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .atelierimg{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 450px;
+        height: 500px;
+
+      
+    }
+    .ateliercontenu{
+
+        overflow-y: scroll;
+        height: 60%;
+        padding: 10px;
+    }
+    .atelier1 h2{
+        color: rgb(10, 126, 158);
+        text-align:end;
+        font-size: 30pt;
+        font-weight: 500;
+    }
+    }
+
+
+
+    @media (max-width: 1200px) {
+
+        body{
+            background-color: rgb(3, 184, 33);
+        }
+        .atelier1{
+            width: 450px;
+            height: 500px;
+        
+            
+            padding: 50px 15px 30px 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .atelierimg{
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            height: 400px;
+          border-radius: 35px;
+          
+        }
+        .ateliercontenu{
+    
+            overflow-y: scroll;
+            height: 55%;
+            padding: 10px;
+        }
+        .atelier1 h2{
+            color: rgb(10, 126, 158);
+            text-align:end;
+            font-size: 25pt;
+            font-weight: 500;
+        }
+        }
+    
+
+
+
+        @media (max-width: 1000px) {
+
+            body{
+                background-color: rgb(3, 21, 184);
+            }
+            .atelier{
+                flex-direction: column-reverse;
+            }
+            .atelier1{
+                width: 85%;
+                height: 500px;
+            margin-top: 45px;
+               
+                padding: 50px 15px 30px 40px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .atelierimg{
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                width: 60%;
+                height: 400px;
+              
+              border-radius: 35px;
+              
+            }
+            .ateliercontenu{
+        
+                overflow-y: scroll;
+                height: 55%;
+                padding: 10px;
+            }
+            .atelier1 h2{
+                color: rgb(10, 126, 158);
+                text-align:end;
+                font-size: 25pt;
+                font-weight: 500;
+            }
+            }
+        
+
+
+
+            @media (max-width: 700px) {
+
+                body{
+                    background-color: rgb(1, 36, 6);
+                }
+                .atelier{
+                    flex-direction: column-reverse;
+                }
+                .atelier1{
+                    width: 90%;
+                    height: 500px;
+                margin-top: 45px;
+                   
+                    padding: 50px 15px 30px 40px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                .atelierimg{
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    width: 400px;
+                    height: 400px;
+                  
+                
+                  
+                }
+                .ateliercontenu{
+            
+                    overflow-y: scroll;
+                    height: 55%;
+                    padding: 10px;
+                }
+                .atelier1 h2{
+                    color: rgb(10, 126, 158);
+                    text-align:end;
+                    font-size: 25pt;
+                    font-weight: 500;
+                }
+                }
+            

@@ -13,14 +13,18 @@ import fran from '../assets/fran.png';
 import bateau from '../assets/7.png';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import './style.css'; // Import the CSS file
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [clicked, setClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-      
+  AOS.init({
+    duration: 1200, // Duration of animation in milliseconds
+    once: true, // Whether animation should happen only once
+  });
   const breathingAnimation = {
     scale: [1, 1.1, 1],
     transition: {
@@ -192,7 +196,7 @@ const Hero = () => {
   };
  
   return ( 
-  <div className="hero" >
+  <div className="hero" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="900">
       <h1 id="hero">A propos de moi</h1>
       <nav className="navigation">
         {slides.map((slide, index) => (

@@ -16,6 +16,7 @@ import Hero from './Hero/Hero';
 import About from './About/About';
 import Me from './Me/Me';
 import Tableaux from './Tableaux/Tableaux';
+import Atelier from './Atelier/Atelier';
 
 function App() {
 
@@ -25,13 +26,11 @@ function App() {
   return (
     <div className="App">
      
- 
-  <About/>
-<Me/>
-  <Hero/>
-
-
-  <Tableaux/>    
+ <About/>
+ <Me/>
+ <Hero/>
+ <Tableaux/>
+<Atelier/>  
    
 
 

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import './style.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default function Tableaux() {
   const slideRef = useRef(null);
 
@@ -62,7 +63,7 @@ export default function Tableaux() {
   ];
 
   return (
-    <div style={{marginTop:100}}>
+    <div style={{marginTop:100}}data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="900" >
       <h1 className='tbl'>Tableaux</h1>
       {
     <div className="container" >
