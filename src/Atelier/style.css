@@ -81,9 +81,7 @@ margin-top: -30px;
 
 @media (max-width: 1450px) {
 
-body{
-    background-color: red;
-}
+
 .atelier1{
     width: 650px;
     height: 700px;
@@ -105,9 +103,7 @@ body{
 
 @media (max-width: 1300px) {
 
-    body{
-        background-color: rgb(12, 128, 181);
-    }
+
     .atelier1{
         width: 550px;
         height: 600px;
@@ -141,9 +137,7 @@ body{
 
     @media (max-width: 1200px) {
 
-        body{
-            background-color: rgb(3, 184, 33);
-        }
+       
         .atelier1{
             width: 450px;
             height: 500px;
@@ -178,9 +172,7 @@ body{
 
         @media (max-width: 1000px) {
 
-            body{
-                background-color: rgb(3, 21, 184);
-            }
+
             .atelier{
                 flex-direction: column-reverse;
             }
@@ -219,9 +211,7 @@ body{
 
             @media (max-width: 700px) {
 
-                body{
-                    background-color: rgb(1, 36, 6);
-                }
+              
                 .atelier{
                     flex-direction: column-reverse;
                 }
