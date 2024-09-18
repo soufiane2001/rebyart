@@ -54,7 +54,7 @@ function App({ sectionRef }) {
         <div
           className={`images ${imageVisible ? 'visible' : ''}`}
           id='image'
-           data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500"
+           
         >
           <div className="custom-shape-containers">
             <img src={reby1} alt="Image" className="custom-shape-images" />
