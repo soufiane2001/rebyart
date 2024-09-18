@@ -324,16 +324,16 @@
     }
 
     .item:nth-child(3) {
-        left: 68%;
+        left: 70%;
         top: 17%;
     }
 
     .item:nth-child(4) {
-        left: 68% ;
+        left: 70% ;
     }
 
     .item:nth-child(5) {
-        left: 68% ;
+        left: 70% ;
         top: 83%;
     }
     .item:nth-child(n+6) {
