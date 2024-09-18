@@ -36,7 +36,7 @@
 .item::before {
     content: "";
     position: absolute;
-    border-radius: 15px;
+    border-radius: 20px;
     top: 0;
     left: 0;
     width: 100%;
@@ -319,8 +319,8 @@
     width: 85%;
  }
     .item {
-        width: 120px;
-        height: 180px;
+        width: 100px;
+        height: 160px;
     }
 
     .item:nth-child(3) {
