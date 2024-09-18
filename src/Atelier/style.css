@@ -265,3 +265,52 @@ margin-top: -30px;
                 }
                 }
             
+
+
+                @media (max-width: 500px) {
+
+                    h4{
+                     margin-top: -100px;
+                    }
+        .atelier{
+         padding: 0px;
+        }
+                     .atelier1{
+                         width: 93%;
+                         height: 400px;
+                     margin-top: 5px;
+                        
+                         padding: 10px;
+                         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                     }
+                     .atelierimg{
+                        
+                         width: 90%;
+                         margin-top: 15px;
+                         height: 220px;
+                        object-fit: contain;
+                     
+                       
+                     }
+                     .ateliercontenu{
+                 
+                         overflow-y: scroll;
+                         height: 60%;
+                         padding: 10px;
+                     }
+                     .atelier1 h1{
+                         font-size: 10pt;
+                         margin-top: 30px;
+                     }
+                     .atelier1 h2{
+                         font-size: 16pt;
+                     }
+                     .ateliercontenu{
+                         margin-top: 15px;
+                     }
+                     .ateliercontenu p{
+                         font-size: 8pt;
+                         line-height: 22px;
+                     }
+                     }
+                 
