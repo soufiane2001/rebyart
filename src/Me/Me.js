@@ -40,7 +40,7 @@ function App({ sectionRef }) {
   return (
     <div className='m'     >
       <h3 id='me' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">Michèle Reby</h3>
-      <div className='me'>
+      <div className='me' data-aos="slide-up" data-aos-duration="1500" data-aos-delay="500">
         <div
           className={`text ${textVisible ? 'visible' : ''}`}
           id='text'
