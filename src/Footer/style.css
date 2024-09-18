@@ -1,0 +1,75 @@
+.footer-legal {
+  background: linear-gradient(90deg, #a20d91, #c31454, #500141); /* Linear gradient with soft colors */
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+  border-radius: 12px;
+  margin-top: 10%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a cute effect */
+}
+
+.footer-content {
+  flex-basis: 45%;
+  margin-bottom: 20px;
+}
+
+.footer-legal h3 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 10%;
+}
+
+.footer-legal h4 {
+  margin-top: 10%;
+  color: #ffffff;
+  
+}
+
+.footer-legal p {
+  color: #f7fcff;
+  font-weight: 400;
+  font-size: 13pt;
+  margin-bottom: 15px;
+}
+
+.footer-legal strong {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .footer-legal {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .footer-content {
+    flex-basis: 100%;
+  }
+
+  .footer-legal h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-legal {
+    padding: 20px;
+  }
+
+  .footer-legal h3 ,.footer-legal h4{
+    font-size: 1.2rem;
+    margin-top: 15%;
+  }
+
+  .footer-legal p {
+    font-size: 10px;
+    margin-top: -10px;
+  }
+}

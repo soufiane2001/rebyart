@@ -18,6 +18,7 @@ import Me from './Me/Me';
 import Tableaux from './Tableaux/Tableaux';
 import Atelier from './Atelier/Atelier';
 import Contact from './Contact/Contact';
+import Footer from './Footer/Footer';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
  <Tableaux/>
 <Atelier/>  
    <Contact/>
+   <Footer/>
 
 
     </div>
