@@ -17,6 +17,7 @@ import About from './About/About';
 import Me from './Me/Me';
 import Tableaux from './Tableaux/Tableaux';
 import Atelier from './Atelier/Atelier';
+import Contact from './Contact/Contact';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
  <Hero/>
  <Tableaux/>
 <Atelier/>  
-   
+   <Contact/>
 
 
     </div>

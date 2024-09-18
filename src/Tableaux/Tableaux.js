@@ -69,7 +69,7 @@ export default function Tableaux() {
     <div className="container" >
       <div id="slide" ref={slideRef} >
         {slides.map((slide, index) => (
-          <div className="item"id="tbl" key={index} style={{ backgroundImage: `url(${slide.img})` }}>
+          <div className="item"id="tbl" key={index} style={{ backgroundImage: `url(${slide.img})`,borderRadius:15 }}>
             <div className="content">
               <div className="name">{slide.name}</div>
               <div className="des">{slide.description}</div>

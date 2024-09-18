@@ -36,7 +36,7 @@
 .item::before {
     content: "";
     position: absolute;
-    border-radius: 20px;
+    border-radius: 10px;
     top: 0;
     left: 0;
     width: 100%;
@@ -317,10 +317,11 @@
 @media (max-width: 520px) {
  .container{
     width: 85%;
+    height: 500px;
  }
     .item {
         width: 100px;
-        height: 160px;
+        height: 140px;
     }
 
     .item:nth-child(3) {

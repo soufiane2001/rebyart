@@ -62,7 +62,7 @@ const Header = () => {
                 height: '3px',
                 backgroundColor: 'white',
                 marginRight: '90px',
-                borderRadius: '2px',
+                borderRadius: '20px',
                 ...containerAnimation,
               }}
             />
