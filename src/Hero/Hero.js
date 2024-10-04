@@ -245,7 +245,7 @@ const Hero = () => {
   </div>
 )
 })}
-<div style={{marginTop:55 }} className="arrow">
+<div  className="arrows">
       
       <Link
  to="slide"

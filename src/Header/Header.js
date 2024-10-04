@@ -93,7 +93,13 @@ const Header = () => {
               À propos de moi
             </li>
             <li>
+            #bateauenpapier
+            </li>
+            <li>
               Tableaux
+            </li>
+            <li>
+            confidentialité
             </li>
             <li>
               Atelier Arc-en-ciel
@@ -175,7 +181,13 @@ const Header = () => {
       {isMobile && isOpen2 && (
         <ul style={{ color: colorheader, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           <li>À propos de moi</li>
+          <li>
+            #bateauenpapier
+            </li>
           <li>Tableaux</li>
+          <li>
+            confidentialité
+            </li>
           <li>Atelier Arc-en-ciel</li>
           <li>Contact</li>
           <li>
