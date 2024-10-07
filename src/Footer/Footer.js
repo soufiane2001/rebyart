@@ -16,6 +16,8 @@ const Footer= () => {
         Adresse électronique : info(at)reby-art.com<br /><br />
 
         Numéro de SIRET : 97947853400014
+
+        Telephone: +33 (0) 7 84 60 74 80
       </p>
     </div>
 

@@ -19,6 +19,7 @@ import Tableaux from './Tableaux/Tableaux';
 import Atelier from './Atelier/Atelier';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
+import Bateau from './Bateau/Bateau';
 
 function App() {
 
@@ -28,6 +29,11 @@ function App() {
   return (
     <div className="App">
      
+
+<Bateau/>
+
+
+{/*
  <About/>
  <Me/>
  <Hero/>
@@ -35,7 +41,7 @@ function App() {
 <Atelier/>  
    <Contact/>
    <Footer/>
-
+*/}
 
     </div>
   );

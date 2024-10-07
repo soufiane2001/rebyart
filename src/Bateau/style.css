@@ -1,0 +1,35 @@
+.bg{
+    background-color: rgb(94, 94, 91);
+}
+.bt{
+    padding: 60px;
+}
+.bt p{
+color: white;
+font-size: 24pt;
+font-weight: 500;
+max-width: 600px;
+
+}
+.bt{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.bt img{
+    width: 300px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.tbl{
+    display: flex;
+    justify-content: space-around;
+   align-items: start;
+    flex-wrap: wrap;
+}
+.tbl img{
+    max-width: 400px;
+   border: 2px solid black;
+    margin-top: 35px;
+}
