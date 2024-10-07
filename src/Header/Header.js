@@ -10,16 +10,21 @@ import fran from '../assets/fran.png';
 import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   AOS.init({
     duration: 1200, // Duration of animation in milliseconds
     once: true, // Whether animation should happen only once
   });
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false); // Language dropdown toggle
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Burg
+  const [language, setLanguage] = useState('fr'); // Default language is French
 
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
+
   const colorheader = '#333'; // Example color, replace with your actual color
   const [selectedImage, setSelectedImage] = useState(fran); // Replace with the path to your selected image
   const options = [
@@ -37,118 +42,91 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  const languageOptions = [
+    { value: 'fr', imgSrc: fran, label: 'French' },
+    { value: 'de', imgSrc: ger, label: 'German' },
+  ];
 
-  const handleSelect = (option) => {
+ 
+
+  // Handle language selection
+  const handleSelectLanguage = (option) => {
+    alert(option.value)
     setSelectedImage(option.imgSrc);
+    setLanguage(option.value);
+    setIsLanguageOpen(false);
   };
-
+  
   const containerAnimation = {
     transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)', // Example animation, adjust as needed
+  };
+  const translations = {
+    fr: {
+      about: 'À propos de moi',
+      bateau: '#bateauenpapier',
+      tableaux: 'Tableaux',
+      privacy: 'Confidentialité',
+      workshop: 'Atelier Arc-en-ciel',
+      contact: 'Contact',
+    },
+    de: {
+      about: 'Über mich',
+      bateau: '#Papierschiff',
+      tableaux: 'Gemälde',
+      privacy: 'Datenschutz',
+      workshop: 'Regenbogen-Werkstatt',
+      contact: 'Kontakt',
+    },
   };
 
   return (
     <header data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
-      {/* Logo or Image on the Left */}
+      {/* Logo on the left */}
+      <Link style={styles.enabledLink}  to="/">
       <img className="logo" src={logo} alt="Logo" style={{ width: isMobile ? '80px' : '100px' }} />
-
-      {/* Navigation List and Burger Menu on the Right */}
+</Link>
+      {/* Navigation and Language Selector */}
       <div style={{ display: 'flex', alignItems: 'center' }}>
+        {/* Navigation Menu */}
         {isMobile ? (
-          <div className="br" onClick={() => setIsOpen2(!isOpen2)} style={{ cursor: 'pointer' }}>
-            {/* Burger Menu Icon */}
-            <div
-              style={{
-                width: '30px',
-                height: '3px',
-                backgroundColor: 'white',
-                marginRight: '90px',
-                borderRadius: '20px',
-                ...containerAnimation,
-              }}
-            />
-            <div
-              style={{
-                width: '30px',
-                height: '3px',
-                backgroundColor: 'white',
-                margin: '6px 0',
-                borderRadius: '2px',
-                ...containerAnimation,
-              }}
-            />
-            <div
-              style={{
-                width: '30px',
-                height: '3px',
-                backgroundColor: 'white',
-                margin: '6px 0',
-                borderRadius: '2px',
-                ...containerAnimation,
-              }}
-            />
+          <div className="burger-menu" onClick={() => setIsMenuOpen(!isMenuOpen)} style={{ cursor: 'pointer' }}>
+            <div style={{ width: '30px', height: '3px', backgroundColor: '#fff', margin: '6px 0', borderRadius: '2px' }} />
+            <div style={{ width: '30px', height: '3px', backgroundColor: '#fff', margin: '6px 0', borderRadius: '2px' }} />
+            <div style={{ width: '30px', height: '3px', backgroundColor: '#fff', margin: '6px 0', borderRadius: '2px' }} />
           </div>
         ) : (
-          <ul style={{ color: colorheader, display: 'flex', alignItems: 'center' }}>
+          <ul className="nav-list" style={{ display: 'flex', gap: '20px', color: '#333' }}>
+            <li><Link style={styles.enabledLink}  to="/">{translations[language].about}</Link></li>
+            <li><Link style={styles.enabledLink}  to="/bateau">{translations[language].bateau}</Link></li>
+            <li>{translations[language].tableaux}</li>
+            <li>{translations[language].privacy}</li>
+            <li>{translations[language].workshop}</li>
+            <li>{translations[language].contact}</li>
             <li>
-              À propos de moi
-            </li>
-            <li>
-            #bateauenpapier
-            </li>
-            <li>
-              Tableaux
-            </li>
-            <li>
-            confidentialité
-            </li>
-            <li>
-              Atelier Arc-en-ciel
-            </li>
-            <li>
-              Contact
-            </li>
-            <li>
-              <div style={{ position: 'relative', display: 'inline-block' }}>
+              {/* Language Selector */}
+              <div className="language-selector" style={{ position: 'relative' }}>
                 <div
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
                   style={{
                     width: '40px',
                     height: '40px',
                     backgroundColor: '#6200ea',
                     borderRadius: '50%',
-                    overflow: 'hidden',
                     cursor: 'pointer',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    position: 'relative',
-                    ...containerAnimation,
                   }}
                 >
-                  <img
-                    src={selectedImage}
-                    alt="Selected"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
+                  <img src={selectedImage} alt="Language" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
                 </div>
 
-                {isOpen && (
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: '100%',
-                      left: 0,
-                      width: '50px',
-                      borderRadius: '5px',
-                      zIndex: 1000,
-                      display: 'flex',
-                      flexDirection: 'column',
-                    }}
-                  >
-                    {options.map((option) => (
+                {isLanguageOpen && (
+                  <div style={{ position: 'absolute', top: '50px', left: 0, display: 'flex', flexDirection: 'column' }}>
+                    {languageOptions.map((option) => (
                       <div
                         key={option.value}
-                        onClick={() => { handleSelect(option); setIsOpen(!isOpen); }}
+                        onClick={() => handleSelectLanguage(option)}
                         style={{
                           width: '40px',
                           height: '40px',
@@ -159,16 +137,7 @@ const Header = () => {
                           justifyContent: 'center',
                         }}
                       >
-                        <img
-                          src={option.imgSrc}
-                          alt="Option"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            borderRadius: '50%',
-                          }}
-                        />
+                        <img src={option.imgSrc} alt={option.label} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
                       </div>
                     ))}
                   </div>
@@ -178,90 +147,37 @@ const Header = () => {
           </ul>
         )}
       </div>
-      {isMobile && isOpen2 && (
-        <ul style={{ color: colorheader, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-          <li>À propos de moi</li>
-          <li>
-            #bateauenpapier
-            </li>
-          <li>Tableaux</li>
-          <li>
-            confidentialité
-            </li>
-          <li>Atelier Arc-en-ciel</li>
-          <li>Contact</li>
-          <li>
-            <div style={{ position: 'relative', display: 'inline-block' }}>
-              <div
-                onClick={() => setIsOpen(true)}
-                style={{
-                  width: '50px',
-                  height: '50px',
-                  backgroundColor: '#6200ea',
-                  borderRadius: '50%',
-                  overflow: 'hidden',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  position: 'relative',
-                  ...containerAnimation,
-                }}
-              >
-                <img
-                  src={selectedImage}
-                  alt="Selected"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
 
-              {isOpen && (
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '110%',
-                    left: 0,
-                    width: '50px',
-                    borderRadius: '5px',
-                    zIndex: 1000,
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  {options.map((option) => (
-                    <div
-                      key={option.value}
-                      onClick={() => { handleSelect(option); setIsOpen(false); }}
-                      style={{
-                        width: '50px',
-                        height: '50px',
-                        cursor: 'pointer',
-                        marginTop: '5px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}
-                    >
-                      <img
-                        src={option.imgSrc}
-                        alt="Option"
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                          borderRadius: '50%',
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </li>
+      {/* Mobile Menu */}
+      {isMobile && isMenuOpen && (
+        <ul style={{ position: 'absolute', top: '100px', left: 0, width: '100%', backgroundColor: '#fff', listStyleType: 'none', padding: '10px', zIndex: 1000 }}>
+          <li>{translations[language].about}</li>
+          <li>{translations[language].bateau}</li>
+          <li>{translations[language].tableaux}</li>
+          <li>{translations[language].privacy}</li>
+          <li>{translations[language].workshop}</li>
+          <li>{translations[language].contact}</li>
         </ul>
       )}
     </header>
   );
 };
-
+const styles = {
+  navList: {
+    listStyleType: 'none',
+    display: 'flex',
+    gap: '10px',
+  },
+  enabledLink: {
+    textDecoration: 'none', // Removes underline
+    color: 'white', // Custom link color
+    fontWeight: 'bold',
+  },
+  disabledLink: {
+    textDecoration: 'none', // Removes underline
+    color: 'grey', // Grey color to indicate it's disabled
+    pointerEvents: 'none', // Disables click interaction
+    fontWeight: 'bold',
+  }
+};
 export default Header;

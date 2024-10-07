@@ -20,7 +20,7 @@ import Atelier from './Atelier/Atelier';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Bateau from './Bateau/Bateau';
-
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 function App() {
 
   const sectionRef = useRef(null);
@@ -30,23 +30,37 @@ function App() {
     <div className="App">
      
 
-<Bateau/>
+     <Router>
 
+<Routes>
+          <Route path="/" element={<Reby />} />
+          <Route path="/bateau" element={<Bateau />} />
+        
+  </Routes>
+</Router>
 
 {/*
- <About/>
- <Me/>
- <Hero/>
- <Tableaux/>
-<Atelier/>  
-   <Contact/>
-   <Footer/>
+ 
 */}
 
     </div>
   );
 }
 
+
+function Reby(){
+
+  return(
+    <>
+    <About/>
+ <Me/>
+ <Hero/>
+ <Tableaux/>
+<Atelier/>  
+   <Contact/>
+   <Footer/></>
+  )
+}
 
 
 export default App;
