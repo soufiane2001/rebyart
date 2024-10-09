@@ -96,12 +96,24 @@ const Header = () => {
           </div>
         ) : (
           <ul className="nav-list" style={{ display: 'flex', gap: '20px', color: '#333' }}>
-         <li>{language === 'fr' ? 'À propos de moi' : 'Über mich'}</li>
-        <li>{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</li>
-        <li>{language === 'fr' ? 'Vita' : 'Lebenslauf'}</li>
-        <li>{language === 'fr' ? 'Bourses et prix' : 'Stipendien und Preise'}</li>
-        <li>{language === 'fr' ? 'Expositions' : 'Ausstellungen'}</li>
-        <li>{language === 'fr' ? 'Contact' : 'Kontakt'}</li>
+           <li >
+        <Link style={styles.enabledLink} to="/">{language === 'fr' ? 'À propos de moi' : 'Über mich'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink} to="/bateau">{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink}   to="/vita">{language === 'fr' ? 'Vita' : 'Lebenslauf'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink}  to="/awards">{language === 'fr' ? 'Bourses et prix' : 'Stipendien und Preise'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink}  to="/exhibitions">{language === 'fr' ? 'Expositions' : 'Ausstellungen'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink}   to="/contact">{language === 'fr' ? 'Contact' : 'Kontakt'}</Link>
+      </li>
             <li>
               {/* Language Selector */}
               <div className="language-selector" style={{ position: 'relative' }}>
