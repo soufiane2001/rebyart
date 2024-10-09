@@ -21,6 +21,7 @@ import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Bateau from './Bateau/Bateau';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { LanguageProvider } from './LanguageContext';
 function App() {
 
   const sectionRef = useRef(null);
@@ -28,7 +29,7 @@ function App() {
   var updtecolorheader=()=>{setcolorheader("black")}
   return (
     <div className="App">
-     
+     <LanguageProvider>
 
      <Router>
 
@@ -38,7 +39,7 @@ function App() {
         
   </Routes>
 </Router>
-
+</LanguageProvider>
 {/*
  
 */}

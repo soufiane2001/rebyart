@@ -2,21 +2,16 @@ import React, { useState } from 'react';
 import Header from '../Header/Header';
 import './style.css';
 import Footer from '../Footer/Footer';
-
+import { useLanguage } from '../LanguageContext';
 function Bateau() {
-  const [language, setLanguage] = useState('fr'); // State to manage the selected language
-
-  const toggleLanguage = () => {
-    setLanguage((prevLang) => (prevLang === 'fr' ? 'de' : 'fr'));
-  };
+   // State to manage the selected language
+  const { language } = useLanguage();
 
   return (
     <div className="bg">
       <Header />
-      <button onClick={toggleLanguage} className="toggle-btn">
-        {language === 'fr' ? 'Passer à l\'allemand' : 'Wechseln Sie zu Französisch'}
-      </button>
-      <div className="bt">
+     
+      <div className="bts">
         {language === 'fr' ? (
           <p>
             Il s'agit d'une marque protégée. Un bateau en papier sur la plage face aux embruns. Artistique Signature et

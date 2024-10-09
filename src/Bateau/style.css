@@ -1,22 +1,22 @@
 .bg{
     background-color: rgb(94, 94, 91);
 }
-.bt{
+.bts{
     padding: 60px;
 }
-.bt p{
+.bts p{
 color: white;
 font-size: 24pt;
 font-weight: 500;
-max-width: 600px;
+width: 500px;
 
 }
-.bt{
+.bts{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.bt img{
+.bts img{
     width: 300px;
     height: 500px;
     object-fit: contain;

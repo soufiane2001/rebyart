@@ -12,7 +12,10 @@ padding-bottom: 100px;
   position: relative;
   
 }
-
+.bt{
+  width: 400px;
+  object-fit: contain;
+}
 .overlayt {
   position: absolute;
   top: 0px;

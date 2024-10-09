@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
-
+import { useLanguage } from '../LanguageContext'; 
 const Header = () => {
   AOS.init({
     duration: 1200, // Duration of animation in milliseconds
@@ -20,8 +20,8 @@ const Header = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false); // Language dropdown toggle
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Burg
-  const [language, setLanguage] = useState('fr'); // Default language is French
-
+   // Default language is French
+  const { language, changeLanguage } = useLanguage(); 
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
@@ -51,9 +51,9 @@ const Header = () => {
 
   // Handle language selection
   const handleSelectLanguage = (option) => {
-    alert(option.value)
+  
     setSelectedImage(option.imgSrc);
-    setLanguage(option.value);
+    changeLanguage(option.value)
     setIsLanguageOpen(false);
   };
   
@@ -96,12 +96,12 @@ const Header = () => {
           </div>
         ) : (
           <ul className="nav-list" style={{ display: 'flex', gap: '20px', color: '#333' }}>
-            <li><Link style={styles.enabledLink}  to="/">{translations[language].about}</Link></li>
-            <li><Link style={styles.enabledLink}  to="/bateau">{translations[language].bateau}</Link></li>
-            <li>{translations[language].tableaux}</li>
-            <li>{translations[language].privacy}</li>
-            <li>{translations[language].workshop}</li>
-            <li>{translations[language].contact}</li>
+         <li>{language === 'fr' ? 'À propos de moi' : 'Über mich'}</li>
+        <li>{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</li>
+        <li>{language === 'fr' ? 'Vita' : 'Lebenslauf'}</li>
+        <li>{language === 'fr' ? 'Bourses et prix' : 'Stipendien und Preise'}</li>
+        <li>{language === 'fr' ? 'Expositions' : 'Ausstellungen'}</li>
+        <li>{language === 'fr' ? 'Contact' : 'Kontakt'}</li>
             <li>
               {/* Language Selector */}
               <div className="language-selector" style={{ position: 'relative' }}>

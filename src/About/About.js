@@ -11,14 +11,17 @@ import './style.css';
 import { Link } from 'react-scroll';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { useLanguage } from '../LanguageContext';
 function About({ sectionRef }) {
+  const { language } = useLanguage(); // Assuming this returns 'fr' or 'de'
   const [selectedImage, setSelectedImage] = useState(fran);
   const [isOpen, setIsOpen] = useState(false);
+  
   AOS.init({
     duration: 1200, // Duration of animation in milliseconds
     once: true, // Whether animation should happen only once
   });
+  
   const options = [
     { value: '2', label: 'Option 2', imgSrc: fran },
     { value: '1', label: 'francais', imgSrc: ger },
@@ -31,7 +34,7 @@ function About({ sectionRef }) {
 
   return (
     <>
-      <div className="all" >
+      <div className="all">
         <div className="background-image">
           <Header />
           <div className="overlayt"></div>
@@ -39,12 +42,12 @@ function About({ sectionRef }) {
           <div
             className="info"
             style={{ display: 'flex', width: '100%', flexWrap: 'wrap', position: 'relative', zIndex: 45 }}
-          data-aos="slide-up" data-aos-duration="1500" data-aos-delay="500"
+            data-aos="slide-up" data-aos-duration="1500" data-aos-delay="500"
           >
             <div>
               <h2 style={{ opacity: 1, transition: 'opacity 1.5s 1.7s' }}>Michèle Reby</h2>
-              <p >
-                Naïveté par rébellion
+              <p>
+                {language === 'fr' ? 'Naïveté par rébellion' : 'Naivität durch Rebellion'}
               </p>
               <div className="social">
                 <img
@@ -84,3 +87,4 @@ function About({ sectionRef }) {
 }
 
 export default About;
+

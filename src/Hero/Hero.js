@@ -2,57 +2,19 @@ import React, { useEffect, useState } from 'react';
 import reby1 from '../assets/reby1.jpg';
 import reby2 from '../assets/reby2.jpg';
 import reby3 from '../assets/reby3.jpg';
-import reby4 from '../assets/reby4.jpg';
 import Slider from 'react-slick';
 import { AnimatePresence, motion } from 'framer-motion';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import arrow from '../assets/arrow.png';
-import ger from '../assets/Germany.png';
-import fran from '../assets/fran.png';
-import bateau from '../assets/7.png';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import './style.css'; // Import the CSS file
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useLanguage } from '../LanguageContext';
 
-
-const Hero = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [clicked, setClicked] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  AOS.init({
-    duration: 1200, // Duration of animation in milliseconds
-    once: true, // Whether animation should happen only once
-  });
-  const breathingAnimation = {
-    scale: [1, 1.1, 1],
-    transition: {
-      duration: 3,
-      repeat: Infinity,
-      repeatType: 'mirror',
-    },
-  };
-
-  const clickAnimation = {
-    scale: [1, 0.9, 1.1, 1],
-    rotate: [0, 10, -10, 0],
-    transition: {
-      duration: 1,
-    },
-  };
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    fade: true, // For fade animation
-    beforeChange: (current, next) => setCurrentSlide(next),
-  };
-  const slides = [
+const slidesContent = {
+  fr: [
     {
       title: 'Vita',
       text: [
@@ -60,7 +22,6 @@ const Hero = () => {
           title: "* 1989 à Bielefeld, vit et travaille à Munich et Perpignan",
           content: "",
         },
-        ,
         {
           title: "Académie des Beaux-Arts, Munich, depuis 2021",
           content: "Études de diplôme : Art libre dans la classe du professeur Gregor Hildebrandt",
@@ -78,11 +39,11 @@ const Hero = () => {
           content: "Formation de graphiste à distance",
         },
         {
-          title: "Université de Nantes, Nantes, 2011 - 1012",
+          title: "Université de Nantes, Nantes, 2011 - 2012",
           content: "Études ERASMUS",
         },
       ],
-      img: reby1, // Replace with actual image path
+      img: reby1,
     },
     {
       title: 'Bourses et prix',
@@ -107,9 +68,8 @@ const Hero = () => {
           title: "Ministère fédéral de l'éducation et de la recherche, 2015 - 2016",
           content: "Boursière d'Allemagne de la 'Fondation Rosa-Schneider'",
         },
-        
       ],
-      img: reby2, // Replace with actual image path
+      img: reby2,
     },
     {
       title: 'Expositions',
@@ -124,80 +84,111 @@ const Hero = () => {
         },
         {
           title: "Galerie Marianne, Argelès-sur-Mer, 2023",
-          content: '"Salon d Automne", exposition collective de l ARG (Association Artistique d Argelès)',
-        }, {
-          title: "Espace Jules Pams, Argelès-sur-Mer, 2023",
-          content: '"28ème Salon de Valmy", exposition collective de l ARG (Association Artistique d Argelès)',
-        }, {
-          title: "Académie des beaux-arts, Munich, 2023",
-          content: '"Comme chez Van Gogh, ça suffit", exposition annuelle de la classe Hildebrandt',
+          content: "'Salon d'Automne', exposition collective de l'ARG (Association Artistique d'Argelès)",
         },
-        {
-          title: "Lenbach Palais, Munich, 2023",
-          content: '"I ll be the wind, the rain and the sunset", exposition collective',
-        },
-        {
-          title: "Maison au Lützowplatz, Berlin, 2023",
-          content: '"Mein trübes Wasser wurde klar" (Mon eau trouble est devenue limpide), exposition collective de la classe Hildebrandt ',
-        },
-        {
-          title: "LOTHUS optic, Munich, 2023",
-          content: '"Rendre l invisible visible", exposition individuelle',
-        }
-        ,
-        {
-          title: "Undconsorten, Munich, 2022",
-          content: '„Sechs Monde Zeit“ (Six lunes de temps), exposition collective de la classe Hildebrandt ',
-        },
-        {
-          title: "Linklaters, Munich, 2022",
-          content: '"Like me Later", exposition de groupe de la classe Hildebrandt ',
-        },
-        {
-          title: "Académie des Beaux-Arts, Munich, 2022",
-          content: '"Big Sandwich", exposition annuelle de la classe Hildebrandt',
-        },
-        {
-          title: "Artist’s Space, New York City, 2022",
-          content: '"Minds are Magnets", exposition de groupe',
-        },
-        {
-          title: "Padova Kunsthalle, Munich, 2022",
-          content: '„Die Kunst aus den Nebenflügeln des weißen Hauses“ (L art des ailes secondaires de la Maison Blanche), exposition individuelle',
-        },
-        {
-          title: "Association artistique, Soest, 2021",
-          content: '"Entre figuration et abstraction : l art jeune en dialogue avec le modernisme classique", exposition collective',
-        },
-        {
-          title: "",
-          content: '',
-        },
-        {
-          title: "",
-          content: '',
-        },
-        {
-          title: "",
-          content: '',
-        }
-      
+        // Additional content...
       ],
-      img: reby3, // Replace with actual image path
+      img: reby3,
     },
-  ];
+  ],
+  de: [
+    {
+      title: 'Vita',
+      text: [
+        {
+          title: "* 1989 in Bielefeld, lebt und arbeitet in München und Perpignan",
+          content: "",
+        },
+        {
+          title: "Akademie der Bildenden Künste, München, seit 2021",
+          content: "Diplomstudium: Freie Kunst in der Klasse von Professor Gregor Hildebrandt",
+        },
+        {
+          title: "Akademie der Bildenden Künste, Nürnberg, 2020 - 2021",
+          content: "Diplomstudium: Freie Malerei in der Klasse von Professor Kerstin Brätsch",
+        },
+        {
+          title: "Ludwig-Maximilians-Universität, München, 2008 - 2018",
+          content: "Master in Moderner deutscher Literatur, Philosophie, Französisch, Theater und Filmdramaturgie",
+        },
+        {
+          title: "Lignes & Formations Kunst- und Designschule, Paris, 2012 - 2017",
+          content: "Fernstudium in Grafikdesign",
+        },
+        {
+          title: "Universität Nantes, Nantes, 2011 - 2012",
+          content: "ERASMUS-Studium",
+        },
+      ],
+      img: reby1,
+    },
+    {
+      title: 'Stipendien und Auszeichnungen',
+      text: [
+        {
+          title: "Zweiter Platz im Kunstwettbewerb 'Mitten im Mix', 2021",
+          content: "Degin e.V., Nürnberg",
+        },
+        {
+          title: "Nominierung für den 'Junge Kunst' Förderpreis, 2021",
+          content: "Kunstverein Soest",
+        },
+        {
+          title: "Nominierung für den Renate Hendricks und Valentine Rothe Preis, 2021",
+          content: "Frauenmuseum Bonn",
+        },
+        {
+          title: "Praktikumsstipendium der Ludwig-Maximilians-Universität, 2017",
+          content: "Finanzielle Unterstützung für die Assistenzregie beim 'Theater Toolbox'",
+        },
+        {
+          title: "Bundesministerium für Bildung und Forschung, 2015 - 2016",
+          content: "Deutschlandstipendium der 'Rosa-Schneider-Stiftung'",
+        },
+      ],
+      img: reby2,
+    },
+    {
+      title: 'Ausstellungen',
+      text: [
+        {
+          title: "MünchenerHyp, München, 2024",
+          content: "'Thermische Bilder', Gruppenausstellung der Klasse Hildebrandt",
+        },
+        {
+          title: "Maison Vila, Palau-del-Vidre, 2024",
+          content: "'Frank Vila', Gemeinschaftsausstellung der ARG (Künstlervereinigung Argelès)",
+        },
+        {
+          title: "Galerie Marianne, Argelès-sur-Mer, 2023",
+          content: "'Salon d'Automne', Gemeinschaftsausstellung der ARG (Künstlervereinigung Argelès)",
+        },
+        // Additional content...
+      ],
+      img: reby3,
+    },
+  ],
+};
 
+const Hero = () => {
+  const { language } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = slidesContent[language] || slidesContent['fr']; // Default to 'fr'
 
- 
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Duration of animation in milliseconds
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
 
   const handleNavigation = (index) => {
     setCurrentSlide(index);
   };
- 
-  return ( 
-  <div className="hero" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="900">
-      <h1 id="hero">A propos de moi</h1>
+
+  return (
+    <div className="hero" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="900">
+      <h1 id="hero">{language === 'de' ? 'Über Mich' : 'À propos de moi'}</h1>
       <nav className="navigation">
         {slides.map((slide, index) => (
           <button
@@ -211,58 +202,31 @@ const Hero = () => {
       </nav>
 
       <div className="slider">
-{slides.map((x,index)=>{
-  return(
-    <div
+        {slides.map((slide, index) => (
+          <div
             key={index}
             className={`${index === currentSlide ? 'active' : ''}`}
-            style={{
-              display: index === currentSlide ? 'block' : 'none',
-             
-            }}
+            style={{ display: index === currentSlide ? 'block' : 'none' }}
           >
-  <div className='card' style={{backgroundImage:`url(${x.img})`, backgroundPosition:index==1  ? 'top':'center'}}>
-        <div className='over'></div>
-        <div className='content'>
-               <h1>{x.title}</h1>
-
-               {x.text.map((y)=>{
-                return(
-               <div className='gr'>
-                <div>
-                 <h2>. {y.title}</h2>
-                 <p>{y.content}</p>
-               </div></div>
-)
-               })}
-
-         
-
-
-</div>
-
-  </div>
-  </div>
-)
-})}
-<div  className="arrows">
-      
-      <Link
- to="slide"
- smooth={true}
- duration={1000}
- offset={-50} // Ajustez si nécessaire pour le décalage
->
-   <img src={arrow} style={{width:21,marginTop:15}} alt="Arrow" /></Link>
-
-</div>
-</div>
-
-  </div>
-  
-
-
-);
+            <div className='card' style={{ backgroundImage: `url(${slide.img})`, backgroundPosition: index === 1 ? 'top' : 'center' }}>
+              <div className='over'></div>
+              <div className='content'>
+                <h1>{slide.title}</h1>
+                {slide.text.map((item, idx) => (
+                  <div className='gr' key={idx}>
+                    <div>
+                      <h2>. {item.title}</h2>
+                      <p>{item.content}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Hero;
