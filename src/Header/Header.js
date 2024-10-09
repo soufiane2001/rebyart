@@ -162,13 +162,66 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobile && isMenuOpen && (
-        <ul style={{ position: 'absolute', top: '100px', left: 0, width: '100%', backgroundColor: '#fff', listStyleType: 'none', padding: '10px', zIndex: 1000 }}>
-          <li>{translations[language].about}</li>
-          <li>{translations[language].bateau}</li>
-          <li>{translations[language].tableaux}</li>
-          <li>{translations[language].privacy}</li>
-          <li>{translations[language].workshop}</li>
-          <li>{translations[language].contact}</li>
+        <ul style={{}}>
+           <li >
+        <Link style={styles.enabledLink} to="/">{language === 'fr' ? 'À propos de moi' : 'Über mich'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink} to="/bateau">{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink}   to="/vita">{language === 'fr' ? 'Vita' : 'Lebenslauf'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink}  to="/awards">{language === 'fr' ? 'Bourses et prix' : 'Stipendien und Preise'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink}  to="/exhibitions">{language === 'fr' ? 'Expositions' : 'Ausstellungen'}</Link>
+      </li>
+      <li>
+        <Link style={styles.enabledLink}   to="/contact">{language === 'fr' ? 'Contact' : 'Kontakt'}</Link>
+      </li>
+          <li>
+          <div className="language-selector" style={{ position: 'relative' }}>
+                <div
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  style={{
+                    width: '40px',
+                    height: '40px',
+                    backgroundColor: '#6200ea',
+                    borderRadius: '50%',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <img src={selectedImage} alt="Language" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                </div>
+
+                {isLanguageOpen && (
+                  <div style={{ position: 'absolute', top: '50px', left: 0, display: 'flex', flexDirection: 'column' }}>
+                    {languageOptions.map((option) => (
+                      <div
+                        key={option.value}
+                        onClick={() => handleSelectLanguage(option)}
+                        style={{
+                          width: '40px',
+                          height: '40px',
+                          cursor: 'pointer',
+                          marginTop: '10px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                        }}
+                      >
+                        <img src={option.imgSrc} alt={option.label} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+          </li>
         </ul>
       )}
     </header>

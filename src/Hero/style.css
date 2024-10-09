@@ -38,7 +38,9 @@ h1{
   margin-top: 20px;
   z-index: 10;
 }
-
+.nav-link{
+  color: #e0e0e0 !important;
+}
 
 .nav-link.active {
   background-color: #4caf50;
@@ -258,6 +260,7 @@ h1{
         }
 
         @media (max-width:521px) {
+
           .hero{
             padding-bottom: 55px;
           }
@@ -294,7 +297,7 @@ h1{
             margin-top: 25px;
           }
           .nav-link {
-            font-size: 10pt;
+            font-size: 8pt;
          
           }
           
@@ -313,5 +316,8 @@ h1{
 }     
 .card{
   border-width: 0px;
+}  .nav-link {
+  font-size: 7pt;
+
 }
 }
