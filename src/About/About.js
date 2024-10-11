@@ -50,16 +50,18 @@ function About({ sectionRef }) {
                 {language === 'fr' ? 'Naïveté par rébellion' : 'Naivität durch Rebellion'}
               </p>
               <div className="social">
+                
                 <img
                   src={email}
                   alt="Email"
                   style={{ opacity: 1, transition: 'opacity 1.5s 1.7s' }}
                 />
+                <a href='https://www.instagram.com/reby.art/'>
                 <img
                   src={inst}
                   alt="Instagram"
                   style={{ opacity: 1, transition: 'opacity 1.5s 1.9s' }}
-                />
+                /></a>
               </div>
             </div>
             <img
