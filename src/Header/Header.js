@@ -172,43 +172,51 @@ const Header = () => {
         )}
       </div>
 
-      {/* Mobile Menu */}
+
+
+
+
+
+
+
+
+
+
+      {/*ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */}
       {isMobile && isMenuOpen && (
         <ul style={{}}>
-
-           <li >
-          
-           <ScrollLink
-      activeClass="active"
-      to="me"  // Target element's ID
-      spy={true}
-      smooth={true}
-      duration={1000}
-      offset={-50} // Adjust to your needs
-      onSetActive={() => AOS.refresh()} // Refresh AOS on scroll
-      style={styles.enabledLink}
-    >
-        {language === 'fr' ? 'À propos de moibb' : 'Über mich'}
-
-        </ScrollLink>
+  <li >
+        <Link to="me"
+            smooth={true}
+            duration={1000}
+            offset={-50}  style={styles.enabledLink} >{language === 'fr' ? 'À propos de moi' : 'Über mich'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink} to="/bateau">{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</Link>
+        <Link style={styles.enabledLink}  onClick={()=>{navigate("/bateau")}}>{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink}   to="/vita">{language === 'fr' ? 'Vita' : 'Lebenslauf'}</Link>
+        <Link  smooth={true}
+            duration={1000}
+            offset={-50} style={styles.enabledLink}   to="vita">{language === 'fr' ? 'Vita' : 'Lebenslauf'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink}  to="/awards">{language === 'fr' ? 'Bourses et prix' : 'Stipendien und Preise'}</Link>
+        <Link  smooth={true}
+            duration={1000}
+            offset={-50} style={styles.enabledLink}  to="atelier">{language === 'fr' ? 'Atelier' : 'Ateier'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink}  to="/exhibitions">{language === 'fr' ? 'Expositions' : 'Ausstellungen'}</Link>
+        <Link  smooth={true}
+            duration={1000}
+            offset={-50} style={styles.enabledLink}  to="tableaux">{language === 'fr' ? 'Expositions' : 'Ausstellungen'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink}   to="/contact">{language === 'fr' ? 'Contact' : 'Kontakt'}</Link>
+        <Link  smooth={true}
+            duration={1000}
+            offset={-50} style={styles.enabledLink}   to="contact">{language === 'fr' ? 'Contact' : 'Kontakt'}</Link>
       </li>
-          <li>
-          <div className="language-selector" style={{ position: 'relative' }}>
+            <li>
+              {/* Language Selector */}
+              <div className="language-selector" style={{ position: 'relative' }}>
                 <div
                   onClick={() => setIsLanguageOpen(!isLanguageOpen)}
                   style={{
@@ -247,7 +255,14 @@ const Header = () => {
                   </div>
                 )}
               </div>
-          </li>
+            </li>
+
+                 
+
+
+
+
+
         </ul>
       )}
     </header>
