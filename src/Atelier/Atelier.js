@@ -43,7 +43,7 @@ Dieses Vergessen des eigenen Ichs im Moment der künstlerischen Schöpfung geht 
 
       {/* Render content dynamically based on selected language */}
       <h4>{content[language].title}</h4>
-      <div className='atelier' data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
+      <div id="atelier" className='atelier' data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
         <div className='atelier1'>
           <h1>{content[language].title}</h1>
           <h2>{content[language].subtitle}</h2>

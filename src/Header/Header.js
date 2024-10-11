@@ -10,8 +10,9 @@ import fran from '../assets/fran.png';
 import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Link } from 'react-router-dom';
+import { BrowserRouter,useNavigate } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext'; 
+import { ScrollLink ,Link} from 'react-scroll';
 const Header = () => {
   AOS.init({
     duration: 1200, // Duration of animation in milliseconds
@@ -56,7 +57,7 @@ const Header = () => {
     changeLanguage(option.value)
     setIsLanguageOpen(false);
   };
-  
+  const navigate = useNavigate();
   const containerAnimation = {
     transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)', // Example animation, adjust as needed
   };
@@ -97,22 +98,33 @@ const Header = () => {
         ) : (
           <ul className="nav-list" style={{ display: 'flex', gap: '20px', color: '#333' }}>
            <li >
-        <Link style={styles.enabledLink} to="/">{language === 'fr' ? 'À propos de moi' : 'Über mich'}</Link>
+        <Link to="me"
+            smooth={true}
+            duration={1000}
+            offset={-50}  style={styles.enabledLink} >{language === 'fr' ? 'À propos de moi' : 'Über mich'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink} to="/bateau">{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</Link>
+        <Link style={styles.enabledLink}  onClick={()=>{navigate("/bateau")}}>{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink}   to="/vita">{language === 'fr' ? 'Vita' : 'Lebenslauf'}</Link>
+        <Link  smooth={true}
+            duration={1000}
+            offset={-50} style={styles.enabledLink}   to="vita">{language === 'fr' ? 'Vita' : 'Lebenslauf'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink}  to="/awards">{language === 'fr' ? 'Bourses et prix' : 'Stipendien und Preise'}</Link>
+        <Link  smooth={true}
+            duration={1000}
+            offset={-50} style={styles.enabledLink}  to="atelier">{language === 'fr' ? 'Atelier' : 'Ateier'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink}  to="/exhibitions">{language === 'fr' ? 'Expositions' : 'Ausstellungen'}</Link>
+        <Link  smooth={true}
+            duration={1000}
+            offset={-50} style={styles.enabledLink}  to="tableaux">{language === 'fr' ? 'Expositions' : 'Ausstellungen'}</Link>
       </li>
       <li>
-        <Link style={styles.enabledLink}   to="/contact">{language === 'fr' ? 'Contact' : 'Kontakt'}</Link>
+        <Link  smooth={true}
+            duration={1000}
+            offset={-50} style={styles.enabledLink}   to="contact">{language === 'fr' ? 'Contact' : 'Kontakt'}</Link>
       </li>
             <li>
               {/* Language Selector */}
@@ -163,8 +175,22 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobile && isMenuOpen && (
         <ul style={{}}>
+
            <li >
-        <Link style={styles.enabledLink} to="/">{language === 'fr' ? 'À propos de moi' : 'Über mich'}</Link>
+          
+           <ScrollLink
+      activeClass="active"
+      to="me"  // Target element's ID
+      spy={true}
+      smooth={true}
+      duration={1000}
+      offset={-50} // Adjust to your needs
+      onSetActive={() => AOS.refresh()} // Refresh AOS on scroll
+      style={styles.enabledLink}
+    >
+        {language === 'fr' ? 'À propos de moibb' : 'Über mich'}
+
+        </ScrollLink>
       </li>
       <li>
         <Link style={styles.enabledLink} to="/bateau">{language === 'fr' ? '#bateauenpapier' : '#Papierschiff'}</Link>

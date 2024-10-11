@@ -187,7 +187,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="900">
+    <div id='vita'  className="hero" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="900">
       <h1 id="hero">{language === 'de' ? 'Über Mich' : 'À propos de moi'}</h1>
       <nav className="navigation">
         {slides.map((slide, index) => (

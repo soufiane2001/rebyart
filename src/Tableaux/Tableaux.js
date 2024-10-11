@@ -249,7 +249,7 @@ export default function Tableaux() {
   return (
     <>
     <PhotoSlide tableaux={tableaux[indice]} index={0} isopen={open} close={()=>{setOpen(!open)}} />
-    <div style={{marginTop:100}}data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="900" >
+    <div id="tableaux" style={{marginTop:100}}data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="900" >
      
       <h1 className='tbl'>Tableaux {language}</h1>
       {

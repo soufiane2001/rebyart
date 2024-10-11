@@ -3,15 +3,21 @@ import Header from '../Header/Header';
 import './style.css';
 import Footer from '../Footer/Footer';
 import { useLanguage } from '../LanguageContext';
+import logo from '../assets/Logo.png';
+import { Link } from 'react-router-dom';
 function Bateau() {
    // State to manage the selected language
   const { language } = useLanguage();
 
   return (
     <div className="bg">
-      <Header />
-     
-      <div className="bts">
+       <header data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
+      {/* Logo on the left */}
+      <Link  to="/">
+      <img className="logo" src={logo} alt="Logo" style={{ width: '100px' }} />
+</Link>
+     </header>
+      <div id='bateau' className="bts">
         {language === 'fr' ? (
           <p>
             Il s'agit d'une marque protégée. Un bateau en papier sur la plage face aux embruns. Artistique Signature et

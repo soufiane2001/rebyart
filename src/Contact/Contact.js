@@ -65,7 +65,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="form-container">
+    <div id="contact" className="form-container">
       <form className="contact-form" onSubmit={handleSubmit}>
         <h2>{content[language].heading}</h2>
 
