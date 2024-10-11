@@ -216,8 +216,24 @@ export default function Tableaux() {
       { id: 5, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/9127044c-a120-4789-b68f-98523a067c98/IMG_4741.jpg?format=1000w' },
       {id:6,src:'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/c6757077-5a5d-43ba-9631-e1eb916ca3d6/IMG_5764.jpg?format=1000w'},
   
-    ],
+    ]
+    ,[
+      { id: 1, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/82d1a6b5-b964-4f15-8c7b-d203039db411/Bildschirmfoto+20sws22-11-11+um+17.00.jpg?format=1000w' },
+      { id: 2, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/f6ce2302-d5ee-478c-a3c1-471908d0e407/Bildschirmfoto+2022-11-11+um+16.59.jpg?format=1000w' },
+      { id: 3, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/711ac60f-94fd-4de5-8ad6-d2f5f91a2076/Bildschirmfoto+2022-11-11+um+17.01.jpg?format=1000w' },
+      { id: 4, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/314df6ed-7613-453d-b93d-4dc5f5462ddc/Bildschirmfoto+AYAY2022-11-11+um+17.00.jpg?format=1000w' },
+      { id: 5, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/9127044c-a120-4789-b68f-98523a067c98/IMG_4741.jpg?format=1000w' },
+      {id:6,src:'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/c6757077-5a5d-43ba-9631-e1eb916ca3d6/IMG_5764.jpg?format=1000w'},
   
+    ] ,[
+      { id: 1, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/82d1a6b5-b964-4f15-8c7b-d203039db411/Bildschirmfoto+20sws22-11-11+um+17.00.jpg?format=1000w' },
+      { id: 2, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/f6ce2302-d5ee-478c-a3c1-471908d0e407/Bildschirmfoto+2022-11-11+um+16.59.jpg?format=1000w' },
+      { id: 3, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/711ac60f-94fd-4de5-8ad6-d2f5f91a2076/Bildschirmfoto+2022-11-11+um+17.01.jpg?format=1000w' },
+      { id: 4, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/314df6ed-7613-453d-b93d-4dc5f5462ddc/Bildschirmfoto+AYAY2022-11-11+um+17.00.jpg?format=1000w' },
+      { id: 5, src: 'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/9127044c-a120-4789-b68f-98523a067c98/IMG_4741.jpg?format=1000w' },
+      {id:6,src:'https://images.squarespace-cdn.com/content/v1/636a4d461e8e557ea87e1182/c6757077-5a5d-43ba-9631-e1eb916ca3d6/IMG_5764.jpg?format=1000w'},
+  
+    ],
   ];
   
 
